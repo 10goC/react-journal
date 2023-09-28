@@ -21,9 +21,7 @@ describe('Pruebas en fileUpload helper', () => {
 
         const imageId = url.split('/').pop().replace('.png', '');
 
-        const cloudResp = await cloudinary.api.delete_resources( 'journal/' + [ imageId ] );
-
-        console.log(cloudResp);
+        await cloudinary.api.delete_resources( 'journal/' + [ imageId ] );
 
     });
 
